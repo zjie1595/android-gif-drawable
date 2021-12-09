@@ -364,6 +364,7 @@ public class GPUGifTextureView extends GLTextureView {
      * @see ScaleType
      */
     public ScaleType getScaleType() {
+
         return mScaleType;
     }
 
