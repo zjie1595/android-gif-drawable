@@ -28,10 +28,16 @@ buildscript {
         ]
     }
     repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-        jcenter()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$versions.androidGradlePlugin"
@@ -47,8 +53,15 @@ subprojects {
         options.compilerArgs << '-Xlint'
     }
     repositories {
-        google()
-        mavenCentral()
-        jcenter()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+
     }
 }
